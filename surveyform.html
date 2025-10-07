@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">TITLE</h1>
+      <p id="description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        assumenda?
+      </p>
+    </header>
+    <form action="survey-form" id="survey-form">
+      <div>
+        <label for="" id="name-label">name</label>
+        <input type="text" id="name" required placeholder="name" />
+      </div>
+      <div>
+        <label for="" id="email-label">email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="email"
+        />
+      </div>
+      <div>
+        <label for="" id="number-label">age</label>
+        <input id="number" type="number" min="10" max="100" placeholder="age" />
+      </div>
+
+      <div>
+        <p>Which option best describes your current role?</p>
+        <select name="drop-down" id="dropdown">
+          <option value="poor">Poor</option>
+          <option value="satisfactory">Satisfactory</option>
+          <option value="good">Good</option>
+          <option value="very-good">Very Good</option>
+          <option selected value="excellent">Excellent</option>
+        </select>
+      </div>
+
+      <div>
+        <p>Would you recommend freeCodeCamp to a friend?</p>
+        <input
+          id="definitely"
+          type="radio"
+          name="recommend"
+          value="definitely"
+        />
+        <label for="definitely">Definitely</label>
+
+        <input id="maybe" type="radio" name="recommend" value="maybe" />
+        <label for="maybe">Maybe</label>
+
+        <input id="not-sure" type="radio" name="recommend" value="not-sure" />
+        <label for="not-sure">Not sure</label>
+      </div>
+
+      <div>
+        <p>What is your favorite feature of freeCodeCamp?</p>
+        <select name="drop-down" id="dropdown">
+          <option value="poor">Poor</option>
+          <option value="satisfactory">Satisfactory</option>
+          <option value="good">Good</option>
+          <option value="very-good">Very Good</option>
+          <option selected value="excellent">Excellent</option>
+        </select>
+      </div>
+
+      <div>
+        <p>What would you like to see improved? (Check all that apply)</p>
+
+        <label for="location">Location</label>
+        <input type="checkbox" id="location" name="location" value="location" />
+
+        <label for="reputation">Reputation</label>
+        <input
+          checked
+          type="checkbox"
+          id="reputation"
+          name="reputation"
+          value="reputation"
+        />
+        <label for="price">Price</label>
+        <input type="checkbox" id="price" name="price" value="price" />
+      </div>
+
+      <div>
+        <p>Any comments or suggestions</p>
+        <textarea
+          cols="20"
+          rows="5"
+          name="comments"
+          id="comments"
+          placeholder="uasbfubasf"
+        ></textarea
+        ><br />
+        <button id="submit">SUBMIT</button>
+      </div>
+    </form>
+  </body>
+</html>

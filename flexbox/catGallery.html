@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background-color: #f5f6f7;
+      }
+      .gallery img {
+        width: 100%;
+        max-width: 350px;
+        height: 300px;
+        border: 5px solid red;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .header {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 32px;
+        background: #0a0a23;
+        color: #fff;
+        border-bottom: 4px solid #fdb347;
+      }
+      .gallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        max-width: 1400px;
+        margin: 0 auto;
+        gap: 16px;
+      }
+
+      .gallery::after {
+        content: "";
+        width: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>css flexbox photo gallery</h1>
+    </header>
+    <div class="gallery">
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg"
+        alt="Cute tabby cat sleeping"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg"
+        alt="Orange cat playing with yarn"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg"
+        alt="Black cat on windowsill"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg"
+        alt="White cat with blue eyes"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg"
+        alt="Gray cat stretching on floor"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg"
+        alt="Siamese cat looking curious"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg"
+        alt="Calico cat in garden"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg"
+        alt="Kitten playing with toy"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg"
+        alt="Cat perched on furniture"
+      />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="display">0.</div>
+      <span id="ms">0</span>
+      <button id="btn" onclick="start()">Start</button>
+      <button id="btnReset" onclick="reset()">Reset</button>
+      <button id="btnSave" onclick="save()">Save</button>
+      <div id="save"></div>
+    </div>
+    <script>
+      let count = 0;
+      let secCount = 0;
+      let displayMs = document.getElementById("ms");
+      let displaySec = document.getElementById("display");
+      let button = document.getElementById("btn");
+      let saveState = document.getElementById("save");
+      let intervalId = null;
+
+      function start() {
+        if (intervalId === null) {
+          intervalId = setInterval(function () {
+            count++;
+            displayMs.textContent = count;
+            if (count % 100 === 0) {
+              secCount++;
+              displaySec.textContent = secCount;
+              count = 0;
+              displayMs.textContent = count;
+            }
+          }, 1);
+          button.textContent = "Stop";
+        } else {
+          clearInterval(intervalId);
+          intervalId = null;
+          button.textContent = "Start";
+        }
+      }
+
+      function save() {
+        saveState.textContent += `  ${secCount}s-${count}ms    `;
+      }
+
+      function reset() {
+        if (intervalId !== null) {
+          clearInterval(intervalId);
+          intervalId = null;
+        }
+        count = 0;
+        secCount = 0;
+        displayMs.textContent = count;
+        displaySec.textContent = secCount;
+      }
+
+      let getPersionES6 = (name, age, height) => {
+        return {
+          name,
+          age,
+          height,
+        };
+      };
+      let output = getPersionES6("HuXn", 19, 200);
+      console.log(output);
+    </script>
+  </body>
+</html>

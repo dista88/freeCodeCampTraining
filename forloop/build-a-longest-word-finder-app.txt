@@ -1,0 +1,24 @@
+** start of script.js **
+
+function findLongestWordLength(str){
+const split = str.split(' ')
+const longestStr = split.reduce((max, word) => word.length > max ? word.length : max, 0)
+return longestStr
+}
+
+const output = findLongestWordLength("The quick brown fox jumped over the lazy dog")
+console.log(output)
+
+
+// function idk(str1) {
+//   const split = str1.split(' ');
+//   const word = split.filter(n => n.length < 2);
+//   return word;
+// }
+
+// console.log(idk('hello world'))
+// console.log(idk("I am a dog"));
+
+
+** end of script.js **
+

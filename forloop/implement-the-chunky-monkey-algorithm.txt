@@ -1,0 +1,19 @@
+** start of script.js **
+
+ const chunkArrayInGroups = (arr,split) => {
+   let container = []
+   for(let i = 0;  i < arr.length; i+= split){
+     container.push(arr.slice(i, i+split))
+   }
+return container
+ }
+
+ console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2))
+
+let arr = ["a", "b", "c", "d"]
+
+arr.slice()
+console.log(arr)
+
+** end of script.js **
+

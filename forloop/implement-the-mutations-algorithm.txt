@@ -1,0 +1,23 @@
+** start of script.js **
+
+function mutation(arr){
+  let lowerCase = []
+  for(let i = 0; i < arr.length; i++){
+    lowerCase.push(arr[i].toLowerCase())  
+  } 
+    let sourceStr = lowerCase[0]
+    let targetStr = lowerCase[1]
+    for(let i = 0; i < targetStr.length; i++){
+      let char = targetStr[i]
+      if(!sourceStr.includes(char)){
+        return false
+      }
+    }
+  return true
+}
+
+console.log(mutation(["hello", "Hello"]))
+console.log(mutation(["hello", "hey"]))
+
+** end of script.js **
+

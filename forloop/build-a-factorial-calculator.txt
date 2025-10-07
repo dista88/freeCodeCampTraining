@@ -1,0 +1,18 @@
+** start of script.js **
+
+let num = 4
+function factorialCalculator(inputNum){
+ let result = 1
+ for(let i = inputNum; i >= 1; i--){
+   result *= i
+
+ } 
+return result
+}
+
+let factorial = factorialCalculator(num)
+let resultMsg = `Factorial of ${num} is ${factorial}`
+console.log(resultMsg)
+
+** end of script.js **
+

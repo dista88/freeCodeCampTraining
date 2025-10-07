@@ -1,0 +1,13 @@
+** start of script.js **
+
+function repeatStringNumTimes(str, repeated){
+ let output = ''
+ for (let i = 0; i < repeated; i++){
+   output += str
+ }
+ return output
+}
+console.log(repeatStringNumTimes('*', 3))
+
+** end of script.js **
+

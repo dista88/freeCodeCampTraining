@@ -1,0 +1,75 @@
+** start of script.js **
+
+const questions = [
+  {
+    category: "Science",
+    question: "What is the chemical symbol for gold?",
+    choices: ["Au", "Ag", "Fe"],
+    answer: "Au"
+  },
+  {
+    category: "History",
+    question: "In what year did the Titanic sink?",
+    choices: ["1912", "1905", "1923"],
+    answer: "1912"
+  },
+  {
+    category: "Geography",
+    question: "What is the capital city of Australia?",
+    choices: ["Sydney", "Melbourne", "Canberra"],
+    answer: "Canberra"
+  },
+  {
+    category: "Literature",
+    question: "Who wrote the play 'Romeo and Juliet'?",
+    choices: ["Charles Dickens", "William Shakespeare", "Jane Austen"],
+    answer: "William Shakespeare"
+  },
+  {
+    category: "Technology",
+    question: "Which company developed the JavaScript programming language?",
+    choices: ["Google", "Microsoft", "Netscape"],
+    answer: "Netscape"
+  },
+  {
+    category: "Film",
+    question: "What is the name of the main computer in 2001: A Space Odyssey?",
+    choices: ["WOPR", "HAL 9000", "Skynet"],
+    answer: "HAL 9000"
+  }
+];
+
+function getRandomQuestion(questionsArr){
+  const randomIndex = Math.floor(Math.random()* questionsArr.length)
+  return questionsArr[randomIndex]
+
+}
+
+function getRandomComputerChoice(choiceArr){
+const randomIndex = Math.floor(Math.random()* choiceArr.length)
+  return choiceArr[randomIndex]
+}
+
+function getResults(question, compChoice){
+  if(compChoice === question.answer){
+    return "The computer's choice is correct!"
+  }else{
+    return `The computer's choice is wrong. The correct answer is: ${question.answer}`
+  }
+}
+
+
+
+const selectedQuestion = getRandomQuestion(questions);
+console.log("Question:", selectedQuestion.question);
+console.log("Choices:", selectedQuestion.choices);
+
+const computerGuess = getRandomComputerChoice(selectedQuestion.choices);
+
+
+const result = getResults(selectedQuestion, computerGuess)
+
+console.log(result)
+
+** end of script.js **
+
