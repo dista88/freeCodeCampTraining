@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+
+      .favorite-icon {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 1.5rem;
+        margin-left: auto;
+      }
+
+      .filled {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="item-list">
+        <li class="item">
+          <p>Java</p>
+          <button class="favorite-icon">&#9825;</button>
+        </li>
+        <li class="item">
+          <p>JavaScript</p>
+          <button class="favorite-icon">&#9825;</button>
+        </li>
+        <li class="item">
+          <p>GO</p>
+          <button class="favorite-icon filled">&#9825;</button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const listItem = document.querySelector(".item-list");
+      const btns = listItem.querySelectorAll(".favorite-icon");
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btn.classList.toggle("filled");
+          btn.textContent = btn.classList.contains("filled") ? "♥" : "♡";
+        });
+      });
+    </script>
+  </body>
+</html>

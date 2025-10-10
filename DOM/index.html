@@ -14,23 +14,47 @@
       </dialog>
       <button id="open-modal">Open Modal Dialog</button>
     </div>
+
+    <div class="counter-group">
+      <div id="counter1" class="display">0</div>
+      <button class="btn" data-target="counter1">add1</button>
+    </div>
+
+    <div class="counter-group">
+      <div id="counter2" class="display">0</div>
+      <button class="btn" data-target="counter2">add2</button>
+    </div>
   </body>
   <script>
-    const btn = document.querySelector("button");
-    btn.addEventListener("click", () => {
-      alert("clicked");
-    });
+    // const btn = document.querySelector("button");
+    // btn.addEventListener("click", () => {
+    //   alert("clicked");
+    // });
 
-    const dialog = document.getElementById("my-modal");
-    const openBtn = document.getElementById("open-modal");
-    const closeBtn = document.getElementById("close-modal");
+    // const dialog = document.getElementById("my-modal");
+    // const openBtn = document.getElementById("open-modal");
+    // const closeBtn = document.getElementById("close-modal");
 
-    openBtn.addEventListener("click", () => {
-      dialog.show();
-    });
+    // openBtn.addEventListener("click", () => {
+    //   dialog.show();
+    // });
 
-    closeBtn.addEventListener("click", () => {
-      dialog.close();
+    // closeBtn.addEventListener("click", () => {
+    //   dialog.close();
+    // });
+
+    // btn
+
+    const btns = document.querySelectorAll(".btn");
+
+    btns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.dataset.target;
+        const display = document.getElementById(targetId);
+        let count = parseInt(display.textContent);
+        count++;
+        display.textContent = count;
+      });
     });
   </script>
 </html>
