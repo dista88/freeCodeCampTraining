@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        gap: 20px;
+      }
+      textarea {
+        width: 250px;
+        padding: 5px;
+        height: 150px;
+        border-style: dotted;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>REALTIME Char Counter</h1>
+      <textarea
+        name=""
+        id="text-input"
+        placeholder="Type something..."
+      ></textarea>
+      <p id="char-count">Character Count: <span id="count">0</span>/50</p>
+    </div>
+  </body>
+  <script>
+    const inputEl = document.querySelector("#text-input");
+    const display = document.getElementById("char-count");
+    const countDisplay = document.querySelector("#count");
+    const MAX_LENGTH = 50;
+    inputEl.maxLength = MAX_LENGTH;
+
+    function updateCount() {
+      //   if (value.length > MAX_LENGTH) {
+      //     e.target.value = value.slice(0, MAX_LENGTH);
+      //   }
+      let count = inputEl.value.length;
+      display.style.color = count >= MAX_LENGTH ? "red" : "black";
+      countDisplay.textContent = count;
+    }
+    updateCount();
+    inputEl.addEventListener("input", updateCount);
+  </script>
+</html>
