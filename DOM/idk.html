@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="display">0</div>
+      <div class="btn">
+        <button>+</button>
+        <button>-</button>
+        <button>reset</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const display = document.querySelector(".display");
+    const btns = document.querySelectorAll(".btn button");
+    let count = 0;
+    btns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        if (e.target.textContent === "reset") {
+          count = 0;
+          display.textContent = count;
+        } else if (e.target.textContent === "+") {
+          count++;
+          display.textContent = count;
+        } else if (e.target.textContent === "-") {
+          count--;
+          display.textContent = count;
+        }
+
+        display.style.color = count >= 1 ? "green" : "red";
+      });
+    });
+  </script>
+</html>
