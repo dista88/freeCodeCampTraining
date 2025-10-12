@@ -1,0 +1,52 @@
+** start of script.js **
+
+let inventory = []
+
+
+function findProductIndex(product){
+return inventory.findIndex(item => item.name.toLowerCase() === product.toLowerCase())
+}
+
+function addProduct(product){
+  let index = findProductIndex(product.name)
+  if(index !== -1){
+    inventory[index].quantity += product.quantity
+    console.log(`${product.name.toLowerCase()} quantity updated`)
+  }else{
+    inventory.push({
+  name: product.name.toLowerCase(),
+  quantity: product.quantity
+})
+console.log(`${product.name.toLowerCase()} added to inventory`)
+  }
+}
+
+function removeProduct(name, quantity){
+  let index = findProductIndex(name)
+
+  if(index === -1){
+    console.log(`${name.toLowerCase()} not found`)
+  } else {
+    if(inventory[index].quantity < quantity){
+      console.log(`Not enough ${name.toLowerCase()} available, remaining pieces: ${inventory[index].quantity}`)
+    } else {
+      inventory[index].quantity -= quantity  
+      let remainingQuantity = inventory[index].quantity  // Save it!
+      
+      if(inventory[index].quantity === 0){
+        inventory.splice(index, 1)  // Now it's removed
+      }
+      
+      console.log(`Remaining ${name.toLowerCase()} pieces: ${remainingQuantity}`)  // Use saved value
+    }
+  }
+}
+
+console.log(findProductIndex("flour"))
+addProduct({name: "FLOUR", quantity: 5}) 
+
+
+removeProduct("FLOUR", 5)
+
+** end of script.js **
+

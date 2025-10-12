@@ -1,0 +1,12 @@
+** start of script.js **
+
+function findElement(arr,truth){
+  let idk = arr.find((truth))
+  return idk 
+}
+const output = findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })
+
+console.log(output)
+
+** end of script.js **
+
