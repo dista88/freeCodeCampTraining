@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div id="password-generator">
+      <div id="password">
+        <input type="text" id="result" value="password" readonly />
+        <button id="copy-button">COPY</button>
+      </div>
+
+      <label for="password-length">Password Length:</label>
+      <input
+        type="range"
+        min="8"
+        max="32"
+        value="8"
+        name="password-length"
+        id="password-length"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output>8</output>
+
+      <div id="options">
+        <label>
+          <input type="checkbox" id="lowercase-option" />
+          <span>Lower (a-z)</span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="uppercase-option" />
+          <span>Upper (A-Z)</span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="number-option" />
+          <span>Number (0-9)</span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="special-option" />
+          <span>Symbol (!@$#%)</span>
+        </label>
+      </div>
+      <button id="generate-button">GENERATE</button>
+    </div>
+    <script>
+      // Checkbox options
+      const lowercaseCheckbox = document.getElementById("lowercase-option");
+      const uppercaseCheckbox = document.getElementById("uppercase-option");
+      const numberCheckbox = document.getElementById("number-option");
+      const specialCheckbox = document.getElementById("special-option");
+
+      // Input/Output elements
+      const resultInput = document.getElementById("result");
+      const copyButton = document.getElementById("copy-button");
+      const passwordLengthSlider = document.getElementById("password-length");
+      const generateButton = document.getElementById("generate-button");
+
+      const lowercase = "abcdefghijklmnopqrstuvwxyz";
+      const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const numbers = "0123456789";
+      const symbols = "!@#$%^&*-+=?";
+
+      function generatePass() {
+        let passChar = "";
+
+        if (uppercaseCheckbox.checked) {
+          passChar += uppercase;
+        }
+        if (lowercaseCheckbox.checked) {
+          passChar += lowercase;
+        }
+        if (numberCheckbox.checked) {
+          passChar += numbers;
+        }
+        if (specialCheckbox.checked) {
+          passChar += symbols;
+        }
+        if (passChar === "") {
+          resultInput.value = "Select at least one option!";
+          return;
+        }
+        if (passChar !== "") {
+          const length = Number(passwordLengthSlider.value);
+          let password = "";
+
+          for (let i = 0; i < length; i++) {
+            let randomIndex = Math.floor(Math.random() * passChar.length);
+            password += passChar[randomIndex];
+          }
+          return (resultInput.value = password);
+        }
+      }
+
+      generateButton.addEventListener("click", generatePass);
+
+      copyButton.addEventListener("click", () => {
+        resultInput.select();
+        navigator.clipboard.writeText(resultInput.value);
+      });
+    </script>
+  </body>
+</html>
