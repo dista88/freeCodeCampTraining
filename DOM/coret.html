@@ -57,37 +57,34 @@
     const todoBtn = document.querySelector("#addBtn");
     const list = document.getElementById("todoList");
 
-    todoBtn.addEventListener("click", () => {
-      const li = document.createElement("li");
-      li.classList = "list";
-      li.textContent = input.value;
+    // Event delegation
+    list.addEventListener("click", (e) => {
+      if (e.target.classList.contains("delete-btn")) {
+        e.target.parentElement.remove();
+      }
+      if (e.target.classList.contains("todo-text")) {
+        e.target.classList.toggle("completed");
+      }
+    });
 
+    todoBtn.addEventListener("click", () => {
       if (input.value === "") return;
+
+      const li = document.createElement("li");
+      li.className = "list";
+
+      const textSpan = document.createElement("span");
+      textSpan.className = "todo-text";
+      textSpan.textContent = input.value;
 
       const deleteBtn = document.createElement("button");
       deleteBtn.className = "delete-btn";
       deleteBtn.textContent = "delete";
-      deleteBtn.addEventListener("click", () => {
-        li.remove();
 
-        if (list.children.length === 0) {
-          alert("theres no todo");
-        }
-      });
-
+      li.appendChild(textSpan);
       li.appendChild(deleteBtn);
       list.appendChild(li);
       input.value = "";
-
-      li.addEassList.toggle("completed");
-      });
     });
-
-    input.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        todoBtn.click();
-      }
-    });ventListener("click", () => {
-        li.cl
   </script>
 </html>
