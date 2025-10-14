@@ -1,0 +1,13 @@
+** start of script.js **
+
+const titleCase = (str)=>{
+const split = str.split(" ")
+const output = split.map(str => str[0].toUpperCase() + str.slice(1).toLowerCase())
+
+ return output.join(' ')
+}
+
+console.log(titleCase("I like to code"))
+
+** end of script.js **
+

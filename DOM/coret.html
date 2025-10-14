@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        background-color: black;
+      }
+
+      .delete-btn {
+        margin-left: 5px;
+      }
+
+      .list {
+        margin: 5px;
+        display: flex;
+        gap: 5px;
+        border: 2px solid black;
+        justify-content: space-between;
+        width: 200px;
+        padding: 10px;
+      }
+
+      #todoInput {
+        justify-self: center;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .completed {
+        text-decoration-line: line-through;
+      }
+
+      li {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">btn</button> <br />
+    <input id="todoInput" type="text" placeholder="Add todo" />
+    <button id="addBtn">Add</button>
+    <ul id="todoList"></ul>
+  </body>
+  <script>
+    const btn = document.querySelector("#btn");
+    btn.addEventListener("click", () => {
+      document.body.classList.toggle("active");
+    });
+
+    const input = document.getElementById("todoInput");
+    const todoBtn = document.querySelector("#addBtn");
+    const list = document.getElementById("todoList");
+  </script>
+</html>
