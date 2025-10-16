@@ -25,7 +25,7 @@
 
       <div class="stats">
         <span id="total-tasks">0 <span>task</span></span>
-        <span id="completed-tasks">2 completed</span>
+        <span id="completed-tasks">0 <span>completed</span></span>
       </div>
 
       <ul class="todo-list"></ul>
@@ -34,6 +34,35 @@
         <p>No tasks yet. Add a task to get started!</p>
       </div>
     </div>
+
+    <!-- modal -->
+    <div id="edit-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Edit Todo</h2>
+        <input type="text" id="edit-input" placeholder="Edit your todo..." />
+        <div class="modal-buttons">
+          <button id="save-edit" class="btn-primary">Save</button>
+          <button id="cancel-edit" class="btn-secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="delete-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Delete Todo?</h2>
+        <p>
+          Are you sure you want to delete this todo? This action cannot be
+          undone.
+        </p>
+        <div class="modal-buttons">
+          <button id="confirm-delete" class="btn-danger">Delete</button>
+          <button id="cancel-delete" class="btn-secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-backdrop" class="backdrop hidden"></div>
+
     <script src="todo.js"></script>
   </body>
 </html>
