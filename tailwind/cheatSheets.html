@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Cheat Sheet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div class="max-w-7xl mx-auto p-6">
+      <h1
+        class="text-4xl font-bold text-center mb-8 text-blue-600 dark:text-blue-400"
+      >
+        Tailwind CSS Cheat Sheet
+      </h1>
+
+      <!-- Layout -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2
+          class="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400"
+        >
+          📐 Layout
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Display
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >block, inline-block, inline, flex, grid, hidden</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Container
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >container, mx-auto</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Position
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >static, relative, absolute, fixed, sticky</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Overflow
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >overflow-auto, overflow-hidden, overflow-scroll</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Flexbox -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">
+          💪 Flexbox
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Direction
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >flex-row, flex-col, flex-row-reverse, flex-col-reverse</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Wrap
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >flex-wrap, flex-nowrap, flex-wrap-reverse</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Justify (Horizontal)
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >justify-start, justify-center, justify-end, justify-between,
+              justify-around, justify-evenly</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Align Items (Vertical)
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >items-start, items-center, items-end, items-stretch,
+              items-baseline</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Align Self
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >self-auto, self-start, self-center, self-end, self-stretch</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Grow & Shrink
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >flex-1, flex-auto, flex-initial, flex-none, grow, shrink</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2 class="text-2xl font-bold mb-4 text-green-600 dark:text-green-400">
+          🎯 Grid
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Columns
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >grid-cols-1 to grid-cols-12, grid-cols-none</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Rows
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >grid-rows-1 to grid-rows-6, grid-rows-none</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Col Span
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >col-span-1 to col-span-12, col-auto</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Row Span
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >row-span-1 to row-span-6, row-auto</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Gap
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >gap-0, gap-1, gap-2, gap-4, gap-6, gap-8</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Spacing -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2
+          class="text-2xl font-bold mb-4 text-orange-600 dark:text-orange-400"
+        >
+          📏 Spacing
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Padding
+            </h3>
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >p-0 to p-96 (all sides)</code
+            >
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >px-4 (horizontal), py-4 (vertical)</code
+            >
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >pt-4, pr-4, pb-4, pl-4 (top, right, bottom, left)</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Margin
+            </h3>
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >m-0 to m-96 (all sides)</code
+            >
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >mx-4 (horizontal), my-4 (vertical)</code
+            >
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >mt-4, mr-4, mb-4, ml-4</code
+            >
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >mx-auto (center horizontally)</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Space Between
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >space-x-4 (horizontal), space-y-4 (vertical)</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Sizing -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2 class="text-2xl font-bold mb-4 text-red-600 dark:text-red-400">
+          📦 Sizing
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Width
+            </h3>
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >w-0 to w-96, w-auto, w-full</code
+            >
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >w-1/2, w-1/3, w-2/3, w-1/4 (fractions)</code
+            >
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >w-screen, w-min, w-max, w-fit</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Height
+            </h3>
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >h-0 to h-96, h-auto, h-full</code
+            >
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >h-screen, h-min, h-max, h-fit</code
+            >
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >h-1/2, h-1/3, h-2/3 (fractions)</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Min/Max Width
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >min-w-0, min-w-full, max-w-xs, max-w-sm, max-w-md, max-w-lg,
+              max-w-xl, max-w-7xl</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Min/Max Height
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >min-h-0, min-h-full, min-h-screen, max-h-full, max-h-screen</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Size (Width + Height)
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >size-0 to size-96, size-full, size-auto</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Typography -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2
+          class="text-2xl font-bold mb-4 text-indigo-600 dark:text-indigo-400"
+        >
+          ✍️ Typography
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Font Size
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >text-xs, text-sm, text-base, text-lg, text-xl, text-2xl to
+              text-9xl</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Font Weight
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >font-thin, font-light, font-normal, font-medium, font-semibold,
+              font-bold, font-black</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Text Align
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >text-left, text-center, text-right, text-justify</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Text Color
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >text-gray-500, text-blue-600, text-red-400</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Line Height
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >leading-none, leading-tight, leading-normal, leading-relaxed,
+              leading-loose</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Letter Spacing
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >tracking-tighter, tracking-tight, tracking-normal, tracking-wide,
+              tracking-wider</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Text Transform
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >uppercase, lowercase, capitalize, normal-case</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Text Decoration
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >underline, line-through, no-underline</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Colors & Backgrounds -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2 class="text-2xl font-bold mb-4 text-pink-600 dark:text-pink-400">
+          🎨 Colors & Backgrounds
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Background Color
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >bg-gray-100, bg-blue-500, bg-red-600, bg-transparent</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Text Color
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >text-gray-700, text-blue-600, text-white</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Border Color
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >border-gray-300, border-blue-500</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Opacity
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >opacity-0, opacity-25, opacity-50, opacity-75, opacity-100</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Background Image
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >bg-cover, bg-contain, bg-center, bg-top, bg-bottom</code
+            >
+          </div>
+        </div>
+        <div class="mt-4">
+          <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+            Color Scale (50-950)
+          </h3>
+          <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+            >gray, red, orange, yellow, green, blue, indigo, purple, pink</code
+          >
+        </div>
+      </div>
+
+      <!-- Borders -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2
+          class="text-2xl font-bold mb-4 text-yellow-600 dark:text-yellow-400"
+        >
+          🔲 Borders
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Border Width
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >border, border-0, border-2, border-4, border-8</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Border Sides
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >border-t, border-r, border-b, border-l, border-x, border-y</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Border Radius
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >rounded-none, rounded-sm, rounded, rounded-md, rounded-lg,
+              rounded-xl, rounded-2xl, rounded-full</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Border Style
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >border-solid, border-dashed, border-dotted, border-none</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Effects -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2 class="text-2xl font-bold mb-4 text-teal-600 dark:text-teal-400">
+          ✨ Effects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Shadow
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >shadow-sm, shadow, shadow-md, shadow-lg, shadow-xl, shadow-2xl,
+              shadow-none</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Opacity
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >opacity-0, opacity-50, opacity-100</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Blur
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >blur-none, blur-sm, blur, blur-md, blur-lg, blur-xl</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Responsive Design -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2 class="text-2xl font-bold mb-4 text-cyan-600 dark:text-cyan-400">
+          📱 Responsive Design
+        </h2>
+        <div class="space-y-3">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Breakpoints
+            </h3>
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >sm: 640px (small devices)</code
+            >
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >md: 768px (tablets)</code
+            >
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >lg: 1024px (laptops)</code
+            >
+            <code
+              class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm mb-2"
+              >xl: 1280px (desktops)</code
+            >
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >2xl: 1536px (large screens)</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Usage Example
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >class="text-sm md:text-base lg:text-lg"</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Hover & States -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2 class="text-2xl font-bold mb-4 text-lime-600 dark:text-lime-400">
+          🖱️ Hover & States
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Hover
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >hover:bg-blue-600, hover:text-white, hover:scale-105</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Focus
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >focus:outline-none, focus:ring-2, focus:ring-blue-500</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Active
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >active:bg-blue-700, active:scale-95</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Dark Mode
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >dark:bg-gray-800, dark:text-white</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Transitions & Animations -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        <h2
+          class="text-2xl font-bold mb-4 text-fuchsia-600 dark:text-fuchsia-400"
+        >
+          🎬 Transitions & Animations
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Transition
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >transition, transition-all, transition-colors,
+              transition-opacity</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Duration
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >duration-75, duration-100, duration-150, duration-200,
+              duration-300, duration-500, duration-700, duration-1000</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Ease
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >ease-linear, ease-in, ease-out, ease-in-out</code
+            >
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Transform
+            </h3>
+            <code class="block bg-gray-100 dark:bg-gray-700 p-2 rounded text-sm"
+              >scale-75, scale-100, scale-110, rotate-45, rotate-90,
+              -rotate-45</code
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
