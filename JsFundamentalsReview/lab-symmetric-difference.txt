@@ -1,0 +1,11 @@
+** start of script.js **
+
+function diffArray(arr1,arr2){
+  return arr1.concat(arr2).filter((items) => !arr1.includes(items) || !arr2.includes(items))
+  
+}
+
+console.log(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]))
+
+** end of script.js **
+

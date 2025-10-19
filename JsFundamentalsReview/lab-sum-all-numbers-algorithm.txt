@@ -1,0 +1,19 @@
+** start of script.js **
+
+const sumAll = ([n,m]) =>{
+  let min = Math.min(n,m)
+  let max = Math.max(n,m)
+
+  let sumAllArr = 0
+
+  for(let i = min; i <= max; i++){
+   sumAllArr += i
+  }
+  return sumAllArr
+}
+console.log(sumAll([1, 4]))
+console.log(sumAll([4, 1]))
+console.log(sumAll([5, 10]))
+
+** end of script.js **
+
