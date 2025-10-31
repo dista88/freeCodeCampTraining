@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 2rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+
+        gap: 20px;
+      }
+      .di {
+        display: flex;
+        gap: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CESAR CHYPER</h1>
+    <div class="di">
+      <div id="display">...</div>
+      <div id="displayDecrpyt">...</div>
+    </div>
+    <div id="input">
+      <p>Input something</p>
+      <input id="inputText" type="text" placeholder="text..." required />
+      <p>Input something key</p>
+      <input id="inputKey" type="number" placeholder="key..." required />
+    </div>
+    <div>
+      <button id="encrypt">encrypt</button>
+    </div>
+
+    <script>
+      const display = document.querySelector("#display");
+      const displayDecrpyt = document.querySelector("#displayDecrpyt");
+      const inputText = document.querySelector("#inputText");
+      const inputKey = document.querySelector("#inputKey");
+      const btn = document.querySelector("button");
+
+      const cesarCypher = () => {
+        const text = inputText.value.toUpperCase();
+        const shift = parseInt(inputKey.value);
+        if (!text || !shift) return;
+
+        let result = "";
+
+        for (let char of text) {
+          const code = char.charCodeAt(0);
+          if (code >= 65 && code <= 90) {
+            const newCode = ((code - 65 + shift) % 26) + 65;
+            const newChar = String.fromCharCode(newCode);
+            result += newChar;
+          } else {
+            result += char;
+          }
+          console.log(code);
+        }
+        display.textContent = result;
+        displayDecrpyt.textContent = text;
+      };
+
+      btn.addEventListener("click", cesarCypher);
+    </script>
+  </body>
+</html>
